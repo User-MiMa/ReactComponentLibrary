@@ -1,5 +1,9 @@
+import Button from "./components/Button";
+
 export default function App(){
     return(
-        <h1>PLACEHOLDER</h1>
+        <main>
+            <Button>Buy now!</Button>
+        </main>
     );
 }
