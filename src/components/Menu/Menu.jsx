@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MenuContext } from "./MenuContext";
 
 export default function Menu({children}){
 
@@ -11,7 +12,7 @@ export default function Menu({children}){
     }
 
     return(
-        <MenuContext.Provider value={open}>
+        <MenuContext.Provider value={ {open,toggleOpen} }>
             <div className="menu">
                 {children}
             </div>
