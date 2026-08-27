@@ -1,6 +1,7 @@
 import Button from "./components/Button/Button";
 import {FaMoneyBill} from "react-icons/fa"
 import Menu from "./components/Menu/Menu";
+import MenuButton from "./components/Menu/MenuButton";
 
 export default function App(){
     return(
@@ -10,7 +11,9 @@ export default function App(){
                 Buy now!
             </Button>
             <Menu>
-                Sports
+                <MenuButton>
+                    Sports
+                </MenuButton>
             </Menu>
         </main>
     );
