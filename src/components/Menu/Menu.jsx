@@ -1,6 +1,4 @@
-import { createContext, useState } from "react";
-
-const MenuContext = createContext();
+import { useState } from "react";
 
 export default function Menu({children}){
 
@@ -13,12 +11,10 @@ export default function Menu({children}){
     }
 
     return(
-        <MenuContext.Provider>
-            <div>
+        <MenuContext.Provider value={open}>
+            <div className="menu">
                 {children}
             </div>
         </MenuContext.Provider>
     );
 }
-
-export {MenuContext};
