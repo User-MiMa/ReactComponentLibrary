@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import {FaMoneyBill} from "react-icons/fa"
 
 export default function App(){
