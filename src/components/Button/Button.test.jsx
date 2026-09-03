@@ -13,7 +13,8 @@ describe("Button",()=>{
             </Button>
         );
 
-        expect(screen.getByRole("button", {name: /buy now/i})).toBeInTheDocument();
+        expect(screen.getByRole("button")).toBeInTheDocument();
+        expect(screen.getByRole("button").textContent).toBe("Buy now!");
     });
 
     test("Displays button with svg properly",()=>{
