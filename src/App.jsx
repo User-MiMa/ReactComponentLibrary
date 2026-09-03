@@ -10,6 +10,8 @@ import ToggleButton from "./components/Toggle/ToggleButton";
 import ToggleDisplay from "./components/Toggle/ToggleDisplay";
 import MenuWithToggleButton from "./components/MenuWithToggle/MenuWithToggleButton";
 import MenuDropdownWithToggle from "./components/MenuWithToggle/MenuDropdownWithToggle";
+import Star from "./components/Star/Star";
+import MenuWithToggle from "./components/MenuWithToggle/MenuWithToggle";
 
 export default function App(){
 
@@ -38,17 +40,21 @@ export default function App(){
             <Avatar>MM</Avatar>
         <br />
             <Toggle>
-                <ToggleButton>
-                    <MenuWithToggleButton>
-                        Food
-                    </MenuWithToggleButton>
-                </ToggleButton>
-                <ToggleDisplay>
-                    <MenuDropdownWithToggle>
-                        {food.map(plate=>(<MenuDropdownItem key={plate}>{plate}</MenuDropdownItem>))} 
-                    </MenuDropdownWithToggle>
-                </ToggleDisplay>
+                <MenuWithToggle>
+                    <ToggleButton>
+                        <MenuWithToggleButton>
+                            Food
+                        </MenuWithToggleButton>
+                    </ToggleButton>
+                    <ToggleDisplay>
+                        <MenuDropdownWithToggle>
+                            {food.map(plate=>(<MenuDropdownItem key={plate}>{plate}</MenuDropdownItem>))} 
+                        </MenuDropdownWithToggle>
+                    </ToggleDisplay>
+                </MenuWithToggle>
             </Toggle>
+        <br/>
+            <Star/>
         </main>
     );
 }
