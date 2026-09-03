@@ -6,5 +6,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: '../dist'
+  },
+  test:{
+    setupFiles:["./test-setup.js"],
+    environment: 'jsdom',
+    coverage: {
+      provider: 'v8',
+      reporter: ["text","html"] 
+    }
   }
 })
