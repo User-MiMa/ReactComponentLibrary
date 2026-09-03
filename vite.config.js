@@ -8,8 +8,9 @@ export default defineConfig({
     outDir: '../dist'
   },
   test:{
-    setupFiles:["./test-setup.js"],
     environment: 'jsdom',
+    globals: true,
+    setupFiles: ["./test-setup.js"],
     coverage: {
       provider: 'v8',
       reporter: ["text","html"] 
